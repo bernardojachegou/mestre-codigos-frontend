@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  background-image: url(/assets/background.jpg);
+  background-image: url(/assets/theme-bg.jpg);
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -25,6 +25,18 @@ body {
 
 .logo-img {
   height: 35px;
+  margin-right: 20px;
+}
+
+.link-icon {
+  height: 20px;
+  margin: 0 10px;
+}
+
+.profile-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .profile-img {
@@ -32,9 +44,8 @@ body {
   border-radius: 5px;
 }
 
-.link-icon {
-  height: 30px;
-  margin: 0 10px;
+#arrow-down {
+  height: 10px;
 }
 
 header {
@@ -42,7 +53,13 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 20px 60px;
+  padding: 0 60px;
+  background: linear-gradient(black, transparent);
+  height: 68px;
+}
+
+.selected {
+  font-weight: bold;
 }
 
 .nav-box {
@@ -53,7 +70,17 @@ header {
 
 .nav-box a {
   text-decoration: none;
+  cursor: pointer;
   margin: 0 10px;
   color: #e5e5e5;
+}
+
+.nav-box .right-nav-link {
+  padding: 0 15px;
+}
+
+.nav-box a:hover {
+  color: #979696;
+  transition: 300ms;
 }
 
