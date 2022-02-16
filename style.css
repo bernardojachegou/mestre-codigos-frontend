@@ -87,23 +87,23 @@ header {
 .featured-box {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
+    max-width: 700px;
     padding-left: 60px;
     margin-top: 90px;
 }
 
 .featured-box h1 {
-    font-size: 66px;
+    font-size: 4.5rem;
     font-weight: bold;
 }
 
 .featured-box h4 {
-    font-size: 23px;
+    font-size: 1.5rem;
     margin-top: 15px;
 }
 
 .featured-box p {
-    font-size: 20px;
+    font-size: 1.3rem;
     margin-top: 15px;
     line-height: 1.8rem;
     font-weight: 500;
@@ -126,10 +126,18 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 24px;
+    padding: 1rem 2.5rem;
     border-radius: 5px;
     border: none;
     cursor: pointer;
+}
+
+#info-button {
+    margin-left: 15px;
+    color: white;
+    background-color: #616161;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 #info-button:hover {
@@ -137,24 +145,16 @@ header {
     transition: 200ms;
 }
 
-#play-button:hover {
-    background-color: rgba(255, 255, 255, 0.75);
-    transition: 200ms;
-}
-
-#info-button {
-    margin-left: 15px;
-    color: white;
-    background-color: #616161;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
 #play-button {
     background-color: white;
     color: black;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
+}
+
+#play-button:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+    transition: 200ms;
 }
 
 #play-button img {
@@ -166,6 +166,31 @@ header {
 }
 
 .carousel-cards-section {
-  display: flex;
-  overflow: hidden;
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel-section {
+    padding-left: 60px;
+    margin-top: 110px;
+}
+
+.carousel-section h2 {
+    color: #e5e5e5;
+    font-weight: 700;
+    line-height: 1.25rem;
+    font-size: 1.6rem;
+}
+
+.section-card {
+    margin-top: 1.2rem;
+}
+
+.section-card + .section-card {
+    margin-left: 10px;
+}
+
+.section-card img {
+    width: 100%;
+    border-radius: 5px;
 }
