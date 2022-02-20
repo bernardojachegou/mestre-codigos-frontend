@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+/* //TODOS
+
+Navbar
+a. Navbar always visible on the top;
+c. create submenu when mouse over x element;
+
+Carousel
+a. add button (left arrow and right arrow);
+
+Global
+a. refactor all css to be responsive; */
+
 /* Global */
 
 html {
@@ -48,14 +60,18 @@ body {
     height: 10px;
 }
 
-header {
+#navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     padding: 0 60px;
-    background: linear-gradient(black, transparent);
+    background: transparent;
     height: 68px;
+    position: fixed;
+    top: 0%;
+    transition: 600ms ease-in;
+    
 }
 
 .selected {
@@ -204,6 +220,4 @@ header {
 .section-card-item {
     flex: none;
     pointer-events: none;
-}   
-
-
+}
