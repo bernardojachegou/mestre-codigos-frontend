@@ -1,5 +1,4 @@
 const lastAddedSection = document.querySelector('#lastAddeds');
-const hypeSection = document.querySelector('#hype');
 const navbar = document.querySelector('#navbar');
 
 function carouselScroll(selectedElement) {
@@ -14,11 +13,11 @@ function carouselScroll(selectedElement) {
     );
 }
 carouselScroll(lastAddedSection);
-carouselScroll(hypeSection);
 
 function changeNavbarBgColor(navbar) {
     window.addEventListener('scroll', () => {
-        window.scrollY > navbar.offsetHeight
+        console.log(navbar.offsetHeight);
+        window.scrollY > navbar.offsetHeight / 3
             ? (navbar.style.background = 'black')
             : (navbar.style.background = 'transparent');
     });

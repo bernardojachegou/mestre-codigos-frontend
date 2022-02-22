@@ -20,20 +20,19 @@ html {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    color: white;
 }
 
 body {
+    background-color: #141414;
+    color: white;
     background-image: url(/assets/theme-bg.jpg);
     background-size: cover;
-    height: 100vh;
-    /* width: 100vw; */
-    z-index: -1;
 }
 
 .logo-img {
     height: 35px;
     margin-right: 20px;
+    object-fit: cover;
 }
 
 .link-icon {
@@ -95,7 +94,8 @@ body {
 }
 
 .submenu div img {
-    height: 35px;
+    height: 32px;
+    width: 32px;
     border-radius: 5px;
 }
 
@@ -107,7 +107,8 @@ body {
 /* profile */
 
 .profile-img {
-    height: 35px;
+    height: 32px;
+    width: 32px;
     border-radius: 5px;
 }
 
@@ -138,11 +139,18 @@ body {
     justify-content: center;
 }
 
+.nav-box a:first-child {
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: 15px;
+}
+
 .nav-box a {
     text-decoration: none;
     cursor: pointer;
     margin: 0 10px;
     color: #e5e5e5;
+    font-size: 14px;
 }
 
 .nav-box .right-nav-link {
@@ -150,8 +158,14 @@ body {
 }
 
 .nav-box a:hover {
-    color: #979696;
+    color: #b9b8b8;
     transition: 300ms;
+}
+
+.content-box {
+    background-image: url(/assets/theme-bg.jpg);
+    background-size: cover;
+
 }
 
 .featured-box {
@@ -159,8 +173,8 @@ body {
     flex-direction: column;
     max-width: 700px;
     padding-left: 60px;
-    margin-top: 90px;
-    margin-bottom: 90px;
+    margin-top: 210px;
+    margin-bottom: 180px;
 }
 
 .featured-box h1 {
