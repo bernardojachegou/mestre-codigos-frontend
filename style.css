@@ -1,17 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-/* //TODOS
+/* TODOS
 
 Carousel
-a. add button (left arrow and right arrow);
-
-Global
-a. refactor all css to be responsive; */
-
-/* Global */
+a. add button (left arrow and right arrow); */
 
 html {
-    box-sizing: border-box;
     font-size: 16px;
 }
 
@@ -22,25 +16,83 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 body {
     background-color: #141414;
     color: white;
-    background-image: url(/assets/theme-bg.jpg);
-    background-size: cover;
 }
 
-.logo-img {
-    height: 35px;
-    margin-right: 20px;
+.selected {
+    font-weight: bold;
+}
+
+/* Navigation bar (OK) */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 4rem;
+    background: transparent;
+    height: 4.4rem;
+    position: fixed;
+    top: 0%;
+    transition: 300ms ease-in;
+}
+
+.primary-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.primary-navigation #logo-img {
+    height: 2.2rem;
+    margin-right: 3rem;
     object-fit: cover;
 }
 
-.link-icon {
-    height: 20px;
-    margin: 0 10px;
+.primary-navigation a:first-child {
+    align-items: flex-start;
+    margin-left: 0;
 }
 
-.profile-box {
+.primary-navigation a {
+    margin: 0 0.6rem;
+    color: #e5e5e5;
+    font-size: 0.9rem;
+}
+
+.secondary-navigation {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.secondary-navigation a {
+    margin: 0 0.4rem;
+    color: #e5e5e5;
+    font-size: 0.9rem;
+}
+
+.primary-navigation a:hover,
+.secondary-navigation a:hover {
+    color: #b9b8b8;
+    transition: 300ms;
+}
+
+.secondary-navigation .navigation-link-icon {
+    height: 1.3rem;
+    width: 1.3rem;
+}
+
+.secondary-navigation .profile-box {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,55 +100,33 @@ body {
     position: relative;
 }
 
+.profile-box .profile-img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.3rem;
+}
+
+.profile-box #arrow-down {
+    height: 0.6rem;
+    width: 0.6rem;
+    margin-left: 0.3rem;
+}
+
 /* submenu */
 
 .profile-box .submenu {
     position: absolute;
-    top: 15px;
-    left: -100px;
-    margin-top: 28px;
-    width: 180px;
+    top: 28px;
+    left: -115px;
+    width: 175px;
+    margin-top: 1.7rem;
+    padding: 0.7rem 0;
     display: block;
     background-color: black;
     transition: all 200ms;
-    opacity: 0;
+    opacity: 1;
     visibility: hidden;
-}
-
-.profile-box .submenu .submenu-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 4px 8px;
-}
-
-.profile-box .submenu #call-center {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-}
-
-.profile-box .submenu .call-center-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.profile-box .submenu .call-center-item + .call-center-item {
-    margin-top: 5px;
-}
-
-.profile-box .submenu div a {
-    font-size: 0.8rem;
-}
-
-.submenu div img {
-    height: 32px;
-    width: 32px;
-    border-radius: 5px;
+    transition: 300ms;
 }
 
 .profile-box:hover .submenu {
@@ -104,110 +134,90 @@ body {
     visibility: initial;
 }
 
-/* profile */
-
-.profile-img {
-    height: 32px;
-    width: 32px;
-    border-radius: 5px;
-}
-
-#arrow-down {
-    height: 10px;
-}
-
-#navbar {
+.submenu .submenu-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 60px;
-    background: transparent;
-    height: 68px;
-    position: fixed;
-    top: 0%;
-    transition: 600ms ease-in;
+    justify-content: flex-start;
+    padding: 0.3rem 0.7rem;
 }
 
-.selected {
-    font-weight: bold;
-}
-
-.nav-box {
+.submenu .submenu-item-box {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-top: 1px solid rgb(145, 145, 145);
+    border-bottom: 1px solid rgb(145, 145, 145);
+    padding: 0.6rem 0;
+    margin: 0.6rem 0;
+}
+
+.submenu-item a {
+    font-size: 0.8rem;
+    color: rgb(241, 241, 241);
+}
+
+.submenu-item img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.3rem;
+}
+
+.submenu-item .submenu-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 0.3rem;
+}
+
+/* Main Content (OK) */
+
+.featured-movie {
+    background-image: url(./assets/theme-bg.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
 }
 
-.nav-box a:first-child {
-    align-items: flex-start;
-    margin-left: 0;
-    margin-right: 15px;
-}
-
-.nav-box a {
-    text-decoration: none;
-    cursor: pointer;
-    margin: 0 10px;
-    color: #e5e5e5;
-    font-size: 14px;
-}
-
-.nav-box .right-nav-link {
-    padding: 0 15px;
-}
-
-.nav-box a:hover {
-    color: #b9b8b8;
-    transition: 300ms;
-}
-
-.content-box {
-    background-image: url(/assets/theme-bg.jpg);
-    background-size: cover;
-
-}
-
-.featured-box {
-    display: flex;
-    flex-direction: column;
+.featured-movie .wrapper {
+    padding: 12rem 0 12rem 4rem;
+    margin-bottom: 4rem;
     max-width: 700px;
-    padding-left: 60px;
-    margin-top: 210px;
-    margin-bottom: 180px;
 }
 
-.featured-box h1 {
+.wrapper h1 {
     font-size: 4.5rem;
     font-weight: bold;
 }
 
-.featured-box h4 {
+.wrapper h4 {
     font-size: 1.5rem;
     margin-top: 15px;
 }
 
-.featured-box p {
+.wrapper p {
     font-size: 1.3rem;
-    margin-top: 15px;
+    margin-top: 1rem;
     line-height: 1.8rem;
     font-weight: 500;
 }
 
-.button-box {
+.wrapper .button-box {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-top: 22px;
+    margin-top: 1.5rem;
 }
 
-#play-icon,
-#info-icon {
-    height: 30px;
+.button-box #play-icon,
+.button-box #info-icon {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.5rem;
 }
 
-#play-button,
-#info-button {
+.button-box .featured-movie-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -215,39 +225,51 @@ body {
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 300ms;
 }
 
-#info-button {
+.button-box #play-button {
+    background-color: white;
+    color: black;
+}
+
+.button-box #play-button:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.button-box #info-button {
     margin-left: 15px;
     color: white;
     background-color: #616161;
-    font-size: 1.5rem;
-    font-weight: bold;
 }
 
-#info-button:hover {
+.button-box #info-button:hover {
     background-color: rgba(97, 97, 97, 0.75);
-    transition: 200ms;
 }
 
-#play-button {
-    background-color: white;
-    color: black;
-    font-size: 1.5rem;
-    font-weight: bold;
+/* Carousel */
+
+.carousel-container {
+    margin-top: -100px;
 }
 
-#play-button:hover {
-    background-color: rgba(255, 255, 255, 0.75);
-    transition: 200ms;
+.carousel-section-wrapper {
+    padding-left: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-#play-button img {
-    margin-right: 10px;
+.carousel-cards-section-items {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-#info-button img {
-    margin-right: 10px;
+.section-card-item {
+    flex: none;
+    pointer-events: none;
 }
 
 .carousel-section-wrapper h2 {
@@ -271,21 +293,4 @@ body {
     object-fit: cover;
 }
 
-/* Carousel */
-
-.carousel-section-wrapper {
-    padding-left: 60px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.carousel-cards-section-items {
-    display: flex;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
-.section-card-item {
-    flex: none;
-    pointer-events: none;
-}
+/* Footer */
