@@ -4,101 +4,106 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" href="/assets/netflix-favicon.png" type="image/x-icon"/>
+        <link rel="shortcut icon" href="./assets/netflix-favicon.png" type="image/x-icon"/>
         <link rel="stylesheet" href="style.css" />
         <title>Netflix</title>
     </head>
 
     <body>
-        <header id="navbar">
-            <div class="nav-box">
-                <a class="logo-link" href="#">
-                    <img class="logo-img" src="assets/netflix-logo.jpg" alt />
+        <header class="navbar">
+            
+            <div class="primary-navigation">
+                <a href="#">
+                    <img id="logo-img" src="./assets/netflix-logo.jpg" alt />
                 </a>
-                <a class="nav-link selected" href="#">Início</a>
-                <a class="nav-link" href="#">Séries</a>
-                <a class="nav-link" href="#">Filmes</a>
-                <a class="nav-link" href="#">Bombando</a>
-                <a class="nav-link" href="#">Minha lista</a>
+                <a class="selected" href="#">Início</a>
+                <a href="#">Séries</a>
+                <a href="#">Filmes</a>
+                <a href="#">Bombando</a>
+                <a href="#">Minha lista</a>
             </div>
-            <div class="nav-box">
+
+            <div class="secondary-navigation">
                 <span>
-                    <img class="link-icon" src="assets/white-search.png" alt="pesquisar" />
+                    <img class="navigation-link-icon" src="./assets/white-search.png" alt="pesquisar" />
                 </span>
-                <a class="right-nav-link" href="#">infantil</a>
+                <a href="#">infantil</a>
                 <span>
-                    <img class="link-icon" src="assets/white-notification.png" alt="notificações" />
+                    <img class="navigation-link-icon" src="./assets/white-notification.png" alt="notificações" />
                 </span>
                 <div class="profile-box">
-                    <a class="profile-link" href="#">
-                        <img class="profile-img" src="assets/profile-pic-01.jpeg" alt="foto do perfil" />
+                    <a href="#">
+                        <img class="profile-img" src="./assets/profile-pic-01.jpeg" alt="foto do perfil" />
                     </a>
                     <span>
-                        <img id="arrow-down" src="assets/white-arrow-down.png" alt="seta para baixo" />
+                        <img id="arrow-down" src="./assets/white-arrow-down.png" alt="seta para baixo" />
                     </span>
                     <div class="submenu">
                         <div class="submenu-item">
-                            <img src="assets/profile-pic-05.jpg" alt="foto do perfil">
+                            <img src="./assets/profile-pic-05.jpg" alt="foto do perfil">
                             <a href="">Rapha</a>
                         </div>
                         <div class="submenu-item">
-                            <img src="assets/profile-pic-04.jpg" alt="foto do perfil">
+                            <img src="./assets/profile-pic-04.jpg" alt="foto do perfil">
                             <a href="">Anny</a>
                         </div>
                         <div class="submenu-item">
-                            <img src="assets/profile-pic-03.jpg" alt="foto do perfil">
+                            <img src="./assets/profile-pic-03.jpg" alt="foto do perfil">
                             <a href="">Danny</a>
                         </div>
                         <div class="submenu-item">
-                            <img src="assets/profile-pic-02.jpg" alt="foto do perfil">
+                            <img src="./assets/profile-pic-02.jpg" alt="foto do perfil">
                             <a href="">Kurt</a>
                         </div>
                         <div class="submenu-item">
-                            <img src="assets/white-pencil.png" alt="foto do perfil">
+                            <img class="submenu-icon" src="./assets/white-pencil.png" alt="foto do perfil">
                             <a href="">Gerenciar perfis</a>
                         </div>
-                        <div id="call-center" class="submenu-item">
-                            <div class="call-center-item">
-                                <img src="assets/white-profile.jpg" alt="foto do perfil">
-                                <a href="">Contas</a>
+                        <div class="submenu-item-box" class="submenu-item">
+                            <div class="submenu-item">
+                                <img class="submenu-icon" src="./assets/white-profile.jpg" alt="foto do perfil">
+                                <a href="" class="selected">Contas</a>
                             </div>
-                            <div class="call-center-item">
-                                <img src="assets/white-question.png" alt="foto do perfil">
-                                <a href="">Centro de ajuda</a>
+                            <div class="submenu-item">
+                                <img class="submenu-icon" src="./assets/white-question.png" alt="foto do perfil">
+                                <a href="" class="selected">Centro de ajuda</a>
                             </div>
                         </div>
                         <div class="submenu-item">
-                            <a href="">Sair da Netflix</a>
+                            <a href="" class="selected">Sair da Netflix</a>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        
-            <div class="featured-box">
-                <h1>The Walking Dead</h1>
-                <h4>Assista agora a primeira temporada</h4>
-                <p>
-                    Rick Grimes, segue viajando em busca de uma nova moradia segura
-                    e distante dos mortos-vivos. A pressão para permanecerem vivos e
-                    lutarem pela sobrevivência faz com que muitos do grupo sejam
-                    submetidos às mais profundas formas de crueldade humana. Rick
-                    acaba descobrindo que o tão assustador desespero pela
-                    subsistência pode ser ainda mais fatal do que os próprios
-                    mortos-vivos que os rodeiam.
-                </p>
-                <div class="button-box">
-                    <button id="play-button">
-                        <img id="play-icon" src="assets/black-play.png" alt="Assistir" />
-                        Assistir
-                    </button>
-                    <button id="info-button">
-                        <img id="info-icon" src="assets/white-info.png" alt="Mais informações" />
-                        Mais informações
-                    </button>
+
+        <main>
+            <div class="featured-movie"> 
+                <div class="wrapper">
+                    <h1>The Walking Dead</h1>
+                    <h4>Assista agora a primeira temporada</h4>
+                    <p>
+                        Rick Grimes, segue viajando em busca de uma nova moradia segura
+                        e distante dos mortos-vivos. A pressão para permanecerem vivos e
+                        lutarem pela sobrevivência faz com que muitos do grupo sejam
+                        submetidos às mais profundas formas de crueldade humana. Rick
+                        acaba descobrindo que o tão assustador desespero pela
+                        subsistência pode ser ainda mais fatal do que os próprios
+                        mortos-vivos que os rodeiam.
+                    </p>
+                    <div class="button-box">
+                        <button class="featured-movie-button" id="play-button">
+                            <img id="play-icon" src="./assets/black-play.png" alt="Assistir" />
+                            Assistir
+                        </button>
+                        <button class="featured-movie-button" id="info-button">
+                            <img id="info-icon" src="./assets/white-info.png" alt="Mais informações" />
+                            Mais informações
+                        </button>
+                    </div>
                 </div>
             </div>
-
+        </main>
 
         <div class="carousel-container">
             <div class="carousel-section-wrapper">
@@ -185,8 +190,6 @@
                 </div>
             </div> -->
         </div>
-
-
 
         <!-- <footer class="dev-info">Dev info</footer> -->
         <script src="script.js"></script>
