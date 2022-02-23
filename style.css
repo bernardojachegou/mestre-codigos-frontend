@@ -127,6 +127,7 @@ body {
     opacity: 1;
     visibility: hidden;
     transition: 300ms;
+    border: 1px solid rgb(90, 90, 90);
 }
 
 .profile-box:hover .submenu {
@@ -146,8 +147,8 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    border-top: 1px solid rgb(145, 145, 145);
-    border-bottom: 1px solid rgb(145, 145, 145);
+    border-top: 1px solid rgb(90, 90, 90);
+    border-bottom: 1px solid rgb(90, 90, 90);
     padding: 0.6rem 0;
     margin: 0.6rem 0;
 }
@@ -167,6 +168,7 @@ body {
     height: 1.5rem;
     width: 1.5rem;
     margin-right: 0.3rem;
+    object-fit: cover;
 }
 
 /* Main Content (OK) */
