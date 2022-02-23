@@ -1,5 +1,5 @@
 const lastAddedSection = document.querySelector('#lastAddeds');
-const navbar = document.querySelector('#navbar');
+const navbar = document.querySelector('.navbar');
 
 function carouselScroll(selectedElement) {
     selectedElement.addEventListener(
