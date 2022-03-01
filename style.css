@@ -34,6 +34,11 @@ body {
     font-weight: bold;
 }
 
+.inactive {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -294,7 +299,7 @@ body {
 }
 
 .carousel-container button:hover {
-    font-size: 6rem;
+    font-size: 8rem;
 }
 
 #prev-button {
@@ -307,6 +312,12 @@ body {
     position: absolute;
     right: 0.7rem;
     bottom: 5rem;
+}
+
+#prev-button,
+#next-button {
+    color: rgba(219, 0, 0, 0.65);
+    font-weight: bold;
 }
 
 footer {
